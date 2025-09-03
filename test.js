@@ -28,7 +28,15 @@ test("One dollar should be 146.26 yens", function() {
     expect(fromDollarToYen(1)).toBe(146.26168224299064); 
 })
 
-
+///////////////////// prueba JPY → GBP///////////////////////
+test("1000 yens should be 5.56 pounds", function() {
+    // Transformar de yenes a euros: 1000 ÷ 156.5
+    // Luego transformar de euros a libras: EUR × 0.87
+    const pounds = fromYenToPound(1000);
+    // regla de 3
+    const expected = (1000 / 156.5) * 0.87;
+    expect( fromYenToPound(1000)).toBe(5.559105431309905); 
+})
 
 
 
